@@ -1,70 +1,88 @@
 import re
+import os
 
-regex = r'(\s+)([a-zA-Z0-9 ]+[0-9]+\ +\([0-9]+\)\ +[0-9]+-[0-9]+\n+)(\s+)([A-Za-z0-9 ,;]+)(\s+)(((([A-z][a-z]+(\ +)([A-Z][a-z]+(\ *))+)|([A-Z][a-z]+\ (((([A-Z]\.\ )+)([A-Z][a-z]+))|([A-Z][a-z]+)))))[, \s]+)+'
+test_str=""
+with open("wihler2017.txt",'r',encoding="utf-8") as f:
+    for line in f.readline():
+        test_str+=line+'\n'
 
-test_str = ("               Hello my name is Chandler Bing 104 (2017) 78-95\n\n	Title here, well, this should be a title, bla bla bla\n\nPieter V. D. Woude, Josh A. Milne, Gandalf Gray Paloma Siesta\n\n")
+regex = r'[\s\w]+([0-9]+(\s+)(\((\d+)\)(\s+)(\d+)[\–\-]+(\d+)))(([\w\s:\/.]+)(\s+))([A-Za-z0-9\- ,:]+)(((\n)[A-Za-z0-9\- ,:]+|[A-Za-z0-9\- ,:]+)*)(\s+)(([A-Z][a-z]+(\s+)((([A-Z][a-z]+(\s*))+)|([A-Z][a-z]+(\s+)[A-Z]+\.(\s+)[A-Z][a-z]+(\s+)))((.|\s)+))+)'
 
-matches = re.finditer(regex, test_str, re.MULTILINE)
+test_str = ("Personality and Individual Differences 104 (2017) 291–296\n\n"
+	"Contents lists available at ScienceDirect\n\n"
+	"Personality and Individual Differences\n\n"
+	"journal homepage: www.elsevier.com/locate/paid \n\n"
+	"Conscientiousness, extraversion, and field sales performance: Combining\n"
+	"narrow personality, social skill, emotional stability, and nonlinearity\n\n"
+	"Andreas Wihler ᵃ, James A. Meurs ᵇ, Tassilo D. Momm ᵃ, Julia John ᵃ, Gerhard \n"
+	"Blickle ᵃ,⁎\n")
 
-for matchNum, match in enumerate(matches, start=1):
+matches = re.finditer(regex, test_str, re.MULTILINE | re.DOTALL)
+
+for matchNum, match in enumerate(matches, start=1): 
     firstlines=match.group()
 
-regex = r'[A-Z][a-z]+\ (((([A-Z]\.\ )+)([A-Z][a-z]+))|([A-Z][a-z]+))'
+regex=r'[\s\w]+([0-9]+(\s+)(\((\d+)\)(\s+)(\d+)[\–\-]+(\d+)))'
 
-matches = re.finditer(regex, firstlines, re.MULTILINE)
+matches = re.finditer(regex, firstlines, re.MULTILINE | re.DOTALL)
+
+for matchNum, match in enumerate(matches, start=1): 
+    primalinie_efectiv=match.group()
+
+primalinie_efectiv=primalinie_efectiv.lstrip()
+primalinie_efectiv=primalinie_efectiv.rstrip()
+
+regex = r'([A-Z][a-z]+(\s+)(([A-Z][a-z]+(\ +))|(([A-Z]\.)(\ +)([A-Z][a-z]+[\ ,]+))))(.,)'
+
+matches = re.finditer(regex, firstlines, re.MULTILINE | re.DOTALL)
 
 names=[]
 for matchNum, match in enumerate(matches, start=1):
     names.append(match.group())
 
-regex = r'[a-zA-Z0-9 ]+[0-9]+\ +\([0-9]+\)\ +[0-9]+-[0-9]+\n+'
-
-matches = re.finditer(regex, test_str, re.MULTILINE)
-
-firstline=""
-for matchNum, match in enumerate(matches, start=1):
-    firstline=match.group()
-    break
-
 regex=r'\([0-9]+\)'
 
-matches=re.finditer(regex,firstline,re.MULTILINE)
+matches=re.finditer(regex,primalinie_efectiv,re.MULTILINE | re.DOTALL)
 
 for matchNum, match in enumerate(matches, start=1):
     year=match.group()
     break
 
-title=firstlines.replace(firstline,'')
+firstlines=firstlines.replace(primalinie_efectiv,'')
 
 for i in names:
-    title=title.replace(i,'')
+    firstlines=firstlines.replace(i,'')
 
-regex=r'[A-Za-z0-9\- ,:]+'
+jurnal=primalinie_efectiv.replace(' '+year,',')
 
-matches=re.finditer(regex,title,re.MULTILINE)
+regex = r'(\d+)[,\ ]+(\d+)(\-|\–)(\d+)'
 
-for matchNum, match in enumerate(matches, start=1):
-    title=match.group()
-    break
-
-title=title.rstrip()
-title=title.lstrip()
-
-firstline=firstline.replace(' '+year,',')
-
-firstline=firstline.rstrip()
-firstline=firstline.lstrip()
-
-regex=r'(\d+)[,: ]+(\d+)\-(\d+)'
-
-matches=re.finditer(regex,firstline,re.MULTILINE)
+matches=re.finditer(regex,jurnal,re.MULTILINE | re.DOTALL)
 
 for matchNum, match in enumerate(matches, start=1):
     capitol=match.group()
     break
 
-jurnal=firstline.replace(capitol,'')
+regex=r'\n[A-Z][a-z]*,[, a-zﬁ:\n]*[A-Z]'
+
+matches=re.finditer(regex,firstlines,re.MULTILINE)
+
+for matchNum, match in enumerate(matches, start=1):
+    titlu=match.group()
+    break
+
+jurnal=jurnal.replace(capitol,'')
 jurnal=jurnal.rstrip()
+
+low = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+upper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
+for i in names:
+    i.replace("",'')
+    i=i[::-1]
+    for c in i:
+        if c not in low:
+            i.replace(c,'')
 
 output=""
 for j,n in enumerate(names):
@@ -80,4 +98,8 @@ for j,n in enumerate(names):
         if j<len(names)-2 and i!=0:
             output+=", "
         
-output+=" "+year+". "+title+". "+jurnal+", "+capitol+"."
+# output+=" "+year+". "+title+". "+jurnal+", "+capitol+"."
+
+output+=" "+year+"."+jurnal+", "+capitol+"."
+
+print(output)
