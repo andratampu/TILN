@@ -1,5 +1,4 @@
 import re
-import os
 
 test_str=""
 with open("wihler2017.txt",'r',encoding="utf-8") as f:
@@ -7,15 +6,6 @@ with open("wihler2017.txt",'r',encoding="utf-8") as f:
         test_str+=line+'\n'
 
 regex = r'[\s\w]+([0-9]+(\s+)(\((\d+)\)(\s+)(\d+)[\–\-]+(\d+)))(([\w\s:\/.]+)(\s+))([A-Za-z0-9\- ,:]+)(((\n)[A-Za-z0-9\- ,:]+|[A-Za-z0-9\- ,:]+)*)(\s+)(([A-Z][a-z]+(\s+)((([A-Z][a-z]+(\s*))+)|([A-Z][a-z]+(\s+)[A-Z]+\.(\s+)[A-Z][a-z]+(\s+)))((.|\s)+))+)'
-
-test_str = ("Personality and Individual Differences 104 (2017) 291–296\n\n"
-	"Contents lists available at ScienceDirect\n\n"
-	"Personality and Individual Differences\n\n"
-	"journal homepage: www.elsevier.com/locate/paid \n\n"
-	"Conscientiousness, extraversion, and field sales performance: Combining\n"
-	"narrow personality, social skill, emotional stability, and nonlinearity\n\n"
-	"Andreas Wihler ᵃ, James A. Meurs ᵇ, Tassilo D. Momm ᵃ, Julia John ᵃ, Gerhard \n"
-	"Blickle ᵃ,⁎\n")
 
 matches = re.finditer(regex, test_str, re.MULTILINE | re.DOTALL)
 

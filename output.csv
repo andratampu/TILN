@@ -1,0 +1,104 @@
+"",,,"from the initial analyses below 0.30 were omitted, and the item loaded"
+"",N,Percent,
+"",,,"on both factors was removed. For the self part, items 12, 1, and 8 were"
+Age groups by sex,,,"loaded on aggressive warning (self_AW), and the remaining on hostile"
+20–30,,,"aggression and revenge (self_HAR) except item 2, accounting for a total"
+male,55,13.0%,variance of 65.87%. The Cronbach’s alpha values of self_AW and
+female,25,5.9%,
+31 40–,,,"self_HAR were 0.62 and 0.95, respectively. For others part, the factor"
+male,84,19.9%,"structure was almost similar to that of the “self” part, and only item 2"
+female,41,9.7%,was loaded on HAR. We used the abbreviation other_AW to denote
+41–50,,,"aggressive warnings of others, with other_HAR representing hostile acts"
+male,92,21.8%,
+"",,,of aggression and revenge by others. A total variance of 64.38% was
+female,41,9.7%,
+51–60,,,explained. The Cronbach’s alpha values of other_AW and other_HAR
+male,55,13.0%,"were 0.67 and 0.94, respectively. Furthermore, when the scales were"
+female,29,6.9%,"used together, the alpha values were 0.93 and 0.92 for the self and"
+Education,,,"others parts, respectively."
+high school or below,69,16.4%,
+college degree,128,30.3%,3.2. Correlation and regression analyses
+bachelor degree or above,225,53.3%,
+Driving experience (year),,,"As shown in Table 3, age was positively correlated with HAR in both"
+1–4 years,80,,
+"",,,self and others. AW and HAR for both self and others were positively
+5–8 years,125,,
+>8 years,133,,"correlated with neuroticism, and negatively with extroversion, agree-"
+"",,,"ableness, conscientiousness, and openness. However, no significant"
+Total mileage (km),,,
+? correlation was found between DAIS and accident count during the20000,90,21.3%,
+20001–50000,120,28.5%,last three years.
+50001–100000,115,27.2%,"Hierarchical regression analyses were conducted for HAR and AW,"
+?100001,97,23.0%,"respectively, by oneself and other drivers (see Table 4). In the first step,"
+Annual mileage (km),,,"sex, age, and driving years were entered as control variables; in the"
+200–6000,109,25.8%,"second step, the five personality traits were entered. The results showed"
+6001–9000,111,26.3%,
+"",,,that neuroticism was a significant predictor of self_AW and other_AW.
+9001–14000,132,31.3%,
+?14000,70,16.6%,Agreeableness was a significant predictor of self_HAR and other_HAR.
+"",,,"Meanwhile, conscientiousness was a significant predictor of self_HAR."
+Accidents,,,
+0,235,55.7%,
+1–2,121,28.7%,3.3. Multivariate analysis of variance (MANOVA) tests: effects of age and
+?3,66,15.6%,sex on DAIS
+"",Self,,Other,,
+"",HAR AW,Mean (SD),HAR,AW,Mean(SD)
+10. Hugged the rear bumper,0.90,0.48(0.84),0.86,,0.52(0.90)
+4. Threatened verbally,0.90,0.64(0.98),0.82,,0.68(0.92)
+5. Made a hand gesture,0.90,0.56(0.92),0.89,,0.68(0.93)
+9. Threatened physically,0.88,0.52(0.90),0.87,,0.59(0.91)
+6. Physically attacked,0.85,0.49(0.85),0.88,,0.57(0.93)
+11. Prevented or obstructed from manoeuvring the vehicle,0.81,0.62(0.90),0.64,,0.82(1.01)
+3. Rammed a vehicle,0.80,0.59(0.90),0.81,,0.54(0.81)
+7. Drove slowly in order to annoy the driver behind,0.73,0.67(0.98),0.60,,0.87(0.99)
+13. Chased,0.66,0.69(0.99),0.66,,0.81(1.04)
+12. Sounded horn,0.80,1.47(1.06),,0.82,1.60(1.09)
+1. Cut up,0.71,1.25(0.83),,0.56,1.62(0.82)
+8. Flashed lights,0.64,1.13(1.03),,0.86,1.50(0.98)
+2. Swore/verbally abused,– –,1.17(0.98),0.71,,0.99(0.90)
+Cronbach’s alpha values,0.95 0.62,,0.94,0.67,
+Variance (%),57.59% 8.28%,,52.58%,11.80%,
+"Note: “–” indicates double loading and dropped item; the Cronbach’s alpha values were calculated after removing the items. “AW”, “aggressive warning”; “HAR”, “hostile aggression and",,,,,
+revenge”.,,,,,
+Table 3,,,,,
+"Correlations among sex, age, DAIS scales and personality traits.",,,,,
+1 2 3,4 5 6 7,8 9,10,11 12,13 13
+1. Sex 1,,,,,
+2. Age 0.01,,,,,
+*3. Education 0.15 ** ?0.23,,,,,
+**4. Driving years ?0.04 0.37 ** ?0.17,,,,,
+**5. Annual mileage ?0.07 ?0.11 * ?0.05,0.17,,,,
+*6. Self_AW 0.06 0.07 ?0.11,0.07 0.08,,,,
+**7. Self_HAR ? 0.01 0.16 ** ? 0.14,** 0.14 ** ?0.04 0.59,,,,
+**8. Other_AW 0.03 0.03 ?0.07,0.03 ?0.01 0.41 ** 0.31,,,,
+**9. Other_HAR 0.00 0.14 ** ? 0.10,* 0.13 ** ?0.06 0.52 ** 0.84,** 0.44,,,
+**10. Extroversion 0.15 ** ? 0.22 ** 0.08,?0.11 * 0.07 ?0.10 * ?0.25,** ?0.07 ?0.24,,,
+**11. Agreeableness 0.09 * ?0.23 ** 0.12 *,?0.12 * ?0.07 ?0.21 ** ?0.40,** ?0.07 ?0.42,** 0.44,,
+**12. Conscientiousness 0.13 ** ?0.21 ** 0.07,?0.14 * ?0.04 ?0.18 ** ?0.37,?0.03 ?,**0.38 ** 0.53 **,0.69,
+**13. Neuroticism ? 0.10 * 0.20 ** ? 0.10,* 0.13 * ? 0.05 0.22 ** 0.32,** 0.15 ** 0.36,? **0.50 **,? 0.62 ** ? 0.68,
+**14. Openness 0.08 * ? 0.14 ** 0.14 **,?0.11 * ?0.05 ?0.11 * ?0.22,** 0.01 ?0.19,** 0.56 **,** 0.50 0.47 **,?0.39
+*15. Accidents of last 3 years ?0.01 ?0.06 0.11 *,0.06 0.06 ?0.03 ?0.09,?0.01 ?0.04,0.11,0.02 0.02,?0.08 0.02
+"Note: “HAR”, hostile aggression and revenge; “AW”, aggressive warning.",,,,,
+Table 4,,,,,
+Hierarchical regression analyses of HAR and AW.,,,,,
+Self_AW,Self_HAR,Other_AW,,Other_HAR,
+Step 1 Step 2,Step 1 Step 2,Step 1,Step 2,Step 1,Step 2
+Sex 0.06 0.08,0.00 0.05,0.03,0.04,0.00,0.06
+*Age 0.05 0.00,* 0.13 0.03,0.02,?0.01,0.11,0.01
+Driving years 0.06 0.04,0.09 0.07,0.02,0.02,0.09,0.07
+Extroversion 0.03,?0.06,,?0.07,,?0.05
+**Agreeableness ?0.13,?0.27 **,,?0.05,,?0.30
+*Conscientiousness ?0.01,?0.14,,0.14,,?0.12
+**Neuroticism 0.15 *,0.03,,0.21,,0.09
+Openness 0.00,0.03,,0.09,,0.09
+2R 0.010 0.066,0.033 0.191,0.002,0.038,0.027,0.213
+2R adjusted 0.003 0.048,0.026 0.175,?0.005,0.019,0.020,0.198
+2R change 0.010 0.056,0.033 0.157,0.002,0.036,0.027,0.186
+"",Age (20–32 years),,,Age (33–41 years),,
+"",Male,Female,Total,Male,Female,Total
+"",N = 72,N= 36,N= 108,N= 79,N = 34,N= 113
+"",Mean(SD),Mean(SD),Mean(SD),Mean(SD),Mean(SD),Mean(SD)
+Self_AW,1.26(0.75),1.17(0.74),1.23(0.74),1.19(0.68),1.40(0.75),1.26(0.71)
+Self_HAR,0.48(0.68),0.27(0.55),0.41(0.64),0.52(0.70),0.57(0.92),0.54(0.77)
+Other_AW,1.56(0.68),1.45(0.81),1.53(0.73),1.59(0.78),1.66(0.65),1.61(0.75)
+Other_HAR,0.60(0.66),0.44(0.55),0.55(0.63),0.69(0.75),0.64(0.75),0.67(0.74)
